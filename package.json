@@ -12,6 +12,7 @@
 	"author": "",
 	"license": "ISC",
 	"dependencies": {
+		"commandkit": "^0.1.10",
 		"discord.js": "^14.14.1",
 		"dotenv": "^16.4.1",
 		"typescript": "^5.3.3"
