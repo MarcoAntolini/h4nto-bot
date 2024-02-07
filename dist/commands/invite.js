@@ -6,16 +6,17 @@ exports.data = {
     description: "Create a one time invite with 1 day expiration.",
 };
 function run({ interaction, client, handler }) {
-    if ((interaction.member?.permissions).has("ManageRoles")) {
-        interaction.channel
-            .createInvite({
-            maxAge: 86400,
-            maxUses: 1,
-        })
-            .then((invite) => {
-            interaction.reply(invite.url);
-        });
-    }
+    interaction.channel
+        .createInvite({
+        maxAge: 86400,
+        maxUses: 1,
+    })
+        .then((invite) => {
+        interaction.reply(invite.url);
+    });
 }
 exports.run = run;
-exports.options = {};
+exports.options = {
+    userPermissions: ["ManageRoles"],
+    botPermissions: ["CreateInstantInvite"],
+};
