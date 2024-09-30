@@ -1,5 +1,5 @@
 import { CommandKit } from "commandkit";
-import { Client } from "discord.js";
+import { Client, Message } from "discord.js";
 import "dotenv/config";
 
 const client = new Client({
@@ -12,5 +12,7 @@ new CommandKit({
 	commandsPath: `${__dirname}/commands`,
 	bulkRegister: true,
 });
+
+export const lastDeletedMessages: Map<string, Message | null> = new Map();
 
 client.login(process.env.BOT_TOKEN);
