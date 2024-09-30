@@ -33,6 +33,6 @@ export function run({ interaction, client, handler }: SlashCommandProps) {
 }
 
 export const options: CommandOptions = {
-	userPermissions: ["ManageRoles"],
+	userPermissions: [],
 	botPermissions: [],
 };

@@ -3,7 +3,7 @@ import { Client, Message } from "discord.js";
 import "dotenv/config";
 
 const client = new Client({
-	intents: ["GuildInvites", "Guilds", "GuildMessages", "MessageContent"],
+	intents: ["GuildInvites", "Guilds", "GuildMessages", "MessageContent" ],
 });
 
 new CommandKit({
